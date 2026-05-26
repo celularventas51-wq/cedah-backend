@@ -1,0 +1,28 @@
+[
+  {
+    "folio": "REP-2026-3045",
+    "placa": "DFSDSFDSF",
+    "descripcion": "asdfdsf",
+    "compartir_ubicacion": false,
+    "latitud": null,
+    "longitud": null,
+    "deseo_realizar_seguimiento": false,
+    "correo_electronico": null,
+    "telefono": null,
+    "imagenes": [],
+    "fecha": "2026-05-22T01:02:48.442Z"
+  },
+  {
+    "folio": "REP-2026-4609",
+    "placa": "SDFA",
+    "descripcion": "fdgdfg",
+    "compartir_ubicacion": false,
+    "latitud": null,
+    "longitud": null,
+    "deseo_realizar_seguimiento": false,
+    "correo_electronico": null,
+    "telefono": null,
+    "imagenes": [],
+    "fecha": "2026-05-21T05:47:25.549Z"
+  }
+]

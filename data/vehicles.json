@@ -1,0 +1,170 @@
+[
+  {
+    "matricula_placa": "JY-35-829",
+    "vin": "3FA6P0HD4JRA999000",
+    "numero_permiso": "PL/23285/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-UX-6A"
+  },
+  {
+    "matricula_placa": "23-UX-6A",
+    "vin": "STICKER-23-UX-6A-PL-23285-TRA-OM-2020",
+    "numero_permiso": "PL/23285/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-UX-6A",
+    "real_placa": "JY-35-829"
+  },
+  {
+    "matricula_placa": "23-UX-5N",
+    "vin": "3FA6P0HD4JRA999010",
+    "numero_permiso": "PL/23286/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-UY-7B"
+  },
+  {
+    "matricula_placa": "23-UY-7B",
+    "vin": "STICKER-23-UY-7B-PL-23286-TRA-OM-2020",
+    "numero_permiso": "PL/23286/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-UY-7B",
+    "real_placa": "23-UX-5N"
+  },
+  {
+    "matricula_placa": "710-FF-2",
+    "vin": "3FA6P0HD4JRA999020",
+    "numero_permiso": "PL/23287/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-UZ-8C"
+  },
+  {
+    "matricula_placa": "23-UZ-8C",
+    "vin": "STICKER-23-UZ-8C-PL-23287-TRA-OM-2020",
+    "numero_permiso": "PL/23287/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-UZ-8C",
+    "real_placa": "710-FF-2"
+  },
+  {
+    "matricula_placa": "54-UW-3X",
+    "vin": "3FA6P0HD4JRA999030",
+    "numero_permiso": "PL/23288/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-VA-9D"
+  },
+  {
+    "matricula_placa": "23-VA-9D",
+    "vin": "STICKER-23-VA-9D-PL-23288-TRA-OM-2020",
+    "numero_permiso": "PL/23288/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-VA-9D",
+    "real_placa": "54-UW-3X"
+  },
+  {
+    "matricula_placa": "55-UW-3X",
+    "vin": "3FA6P0HD4JRA999040",
+    "numero_permiso": "PL/23289/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-VB-0E"
+  },
+  {
+    "matricula_placa": "23-VB-0E",
+    "vin": "STICKER-23-VB-0E-PL-23289-TRA-OM-2020",
+    "numero_permiso": "PL/23289/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-VB-0E",
+    "real_placa": "55-UW-3X"
+  },
+  {
+    "matricula_placa": "12AP4E",
+    "vin": "3FA6P0HD4JRA999050",
+    "numero_permiso": "PL/23290/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-VC-1F"
+  },
+  {
+    "matricula_placa": "23-VC-1F",
+    "vin": "STICKER-23-VC-1F-PL-23290-TRA-OM-2020",
+    "numero_permiso": "PL/23290/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-VC-1F",
+    "real_placa": "12AP4E"
+  },
+  {
+    "matricula_placa": "87UG6F",
+    "vin": "3FA6P0HD4JRA999060",
+    "numero_permiso": "PL/23291/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-WD-9A"
+  },
+  {
+    "matricula_placa": "23-WD-9A",
+    "vin": "STICKER-23-WD-9A-PL-23291-TRA-OM-2020",
+    "numero_permiso": "PL/23291/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-WD-9A",
+    "real_placa": "87UG6F"
+  },
+  {
+    "matricula_placa": "76UJ8F",
+    "vin": "3FA6P0HD4JRA999070",
+    "numero_permiso": "PL/23292/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-WD-9A"
+  },
+  {
+    "matricula_placa": "23-WD-9A",
+    "vin": "STICKER-23-WD-9A-PL-23292-TRA-OM-2020",
+    "numero_permiso": "PL/23292/TRA/OM/2020",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-WD-9A",
+    "real_placa": "76UJ8F"
+  }
+]

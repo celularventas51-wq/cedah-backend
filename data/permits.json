@@ -1,0 +1,90 @@
+[
+  {
+    "uuid": "9e9aacc6-4668-4a86-a820-45fb940a4022",
+    "razon_social": "KAYJES INTERNACIONAL S.A. DE C.V.",
+    "numero_permiso": "PL/23285/TRA/OM/2020",
+    "vigencia": "Del 2020-01-15 al 2050-12-16",
+    "estado": "Vigente",
+    "productos": [
+      "diesel",
+      "gasolina"
+    ]
+  },
+  {
+    "uuid": "b7d3e1f2-8c45-4b9a-91d6-3af728e60c17",
+    "razon_social": "KAYJES INTERNACIONAL S.A. DE C.V.",
+    "numero_permiso": "PL/23286/TRA/OM/2020",
+    "vigencia": "Del 2020-01-15 al 2050-12-16",
+    "estado": "Vigente",
+    "productos": [
+      "diesel",
+      "gasolina"
+    ]
+  },
+  {
+    "uuid": "4c8f2a65-d917-4e3b-a5c0-7b94e13d8f52",
+    "razon_social": "KAYJES INTERNACIONAL S.A. DE C.V.",
+    "numero_permiso": "PL/23287/TRA/OM/2020",
+    "vigencia": "Del 2020-01-15 al 2050-12-16",
+    "estado": "Vigente",
+    "productos": [
+      "diesel",
+      "gasolina"
+    ]
+  },
+  {
+    "uuid": "e2a74b19-5f83-4d2c-b6e8-1c09d45a72bf",
+    "razon_social": "KAYJES INTERNACIONAL S.A. DE C.V.",
+    "numero_permiso": "PL/23288/TRA/OM/2020",
+    "vigencia": "Del 2020-01-15 al 2050-12-16",
+    "estado": "Vigente",
+    "productos": [
+      "diesel",
+      "gasolina"
+    ]
+  },
+  {
+    "uuid": "6d1c8e3a-a2b7-4f90-8d45-5e6f3c2b19a8",
+    "razon_social": "KAYJES INTERNACIONAL S.A. DE C.V.",
+    "numero_permiso": "PL/23289/TRA/OM/2020",
+    "vigencia": "Del 2020-01-15 al 2050-12-16",
+    "estado": "Vigente",
+    "productos": [
+      "diesel",
+      "gasolina"
+    ]
+  },
+  {
+    "uuid": "a3f59c82-7e14-4a6d-b308-9d2c5f1e84b6",
+    "razon_social": "KAYJES INTERNACIONAL S.A. DE C.V.",
+    "numero_permiso": "PL/23290/TRA/OM/2020",
+    "vigencia": "Del 2020-01-15 al 2050-12-16",
+    "estado": "Vigente",
+    "productos": [
+      "diesel",
+      "gasolina"
+    ]
+  },
+  {
+    "uuid": "71e04d8b-3c96-4f2a-ae57-c8b1d63f290e",
+    "razon_social": "KAYJES INTERNACIONAL S.A. DE C.V.",
+    "numero_permiso": "PL/23291/TRA/OM/2020",
+    "vigencia": "Del 2020-01-15 al 2050-12-16",
+    "estado": "Vigente",
+    "productos": [
+      "diesel",
+      "gasolina"
+    ]
+  },
+  {
+    "uuid": "f5b82c47-0d9e-4a13-97b6-8e3a2d1c56f4",
+    "razon_social": "KAYJES INTERNACIONAL S.A. DE C.V.",
+    "numero_permiso": "PL/23292/TRA/OM/2020",
+    "vigencia": "Del 2020-01-15 al 2050-12-16",
+    "estado": "Vigente",
+    "productos": [
+      "diesel",
+      "gasolina"
+    ]
+  }
+]
