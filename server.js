@@ -79,38 +79,43 @@ function getReports() {
   }
 }
 
+// Helper para guardar reportes
 function saveReports(reports) {
   fs.writeFileSync(reportsFilePath, JSON.stringify(reports, null, 2));
 }
 
 // ---- Endpoints de API ----
 
-// 1. Validar placa o serie (soporta multipart/form-data)
+// 1. Validar placa o serie (soporta multipart/form-data con normalización de guiones)
 app.post('/consultar-placa', upload.none(), (req, res) => {
   const { placa, serie, vin, captcha_solution } = req.body;
-  const searchVal = (placa || serie || vin || '').trim().toUpperCase();
+  
+  // Obtenemos el valor enviado original de la petición
+  const originalSearchVal = (placa || serie || vin || '').trim();
+  
+  // NORMALIZACIÓN: Convertimos a mayúsculas y removemos TODOS los espacios y guiones para la comparación
+  const searchValNormalized = originalSearchVal.toUpperCase().replace(/[\s-]/g, '');
 
-  console.log(`[API] Consulta recibida - Tipo: ${placa ? 'Placa' : (vin ? 'VIN' : 'Serie')}, Valor: ${searchVal}`);
+  console.log(`[API] Consulta recibida - Tipo: ${placa ? 'Placa' : (vin ? 'VIN' : 'Serie')}, Valor Original: "${originalSearchVal}", Normalizado: "${searchValNormalized}"`);
 
-  if (!searchVal) {
+  if (!searchValNormalized) {
     return res.status(400).json({ error: true, message: 'Debe ingresar una placa, serie o VIN para validar.' });
   }
 
-  // Cargar vehículos de la "base de datos"
+  // Cargar vehículos de la base de datos distribuida en JSON
   const vehicles = getVehicles();
   let foundVehicle = null;
 
+  // Realizamos la búsqueda comparando strings completamente limpias de guiones y espacios
   if (placa) {
-    foundVehicle = vehicles.find(v => v.matricula_placa.toUpperCase() === searchVal);
+    foundVehicle = vehicles.find(v => v.matricula_placa.toUpperCase().replace(/[\s-]/g, '') === searchValNormalized);
   } else if (vin) {
-    // Buscar por VIN coincidente
-    foundVehicle = vehicles.find(v => v.vin && v.vin.toUpperCase() === searchVal);
+    foundVehicle = vehicles.find(v => v.vin && v.vin.toUpperCase().replace(/[\s-]/g, '') === searchValNormalized);
   } else if (serie) {
-    // Buscar por serie o coincidencia
     foundVehicle = vehicles.find(v => 
-      (v.vin && v.vin.toUpperCase() === searchVal) || 
-      v.matricula_placa.toUpperCase() === searchVal || 
-      (v.tipo_transporte && v.tipo_transporte.toUpperCase().includes(searchVal))
+      (v.vin && v.vin.toUpperCase().replace(/[\s-]/g, '') === searchValNormalized) || 
+      v.matricula_placa.toUpperCase().replace(/[\s-]/g, '') === searchValNormalized || 
+      (v.tipo_transporte && v.tipo_transporte.toUpperCase().replace(/[\s-]/g, '').includes(searchValNormalized))
     );
   }
 
@@ -194,7 +199,6 @@ app.get('/api/reportes', (req, res) => {
 // 4. Obtener detalles de un permiso por UUID
 app.get('/api/permiso/:id', (req, res) => {
   const permits = getPermits();
-  // Support lookup by UUID or by permit number
   const foundPermit = permits.find(p => p.uuid === req.params.id || p.numero_permiso === req.params.id);
   if (foundPermit) {
     return res.json(foundPermit);
@@ -229,7 +233,7 @@ app.get('/energia/permiso/PL/:num/TRA/OM/:year', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Iniciar servidor (0.0.0.0 = accesible desde toda la red y producción)
+// Iniciar servidor (0.0.0.0 = accesible en producción)
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`================================================================`);
   console.log(`🚀 Servidor ejecutándose en http://localhost:${PORT}`);
