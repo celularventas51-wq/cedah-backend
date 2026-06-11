@@ -56,7 +56,7 @@
     "vin": "STICKER-23-UZ-8C-PL-23285-TRA-OM-2020",
     "numero_permiso": "PL/23285/TRA/OM/2020",
     "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
-                "tipo_transporte": "SEMIREMOLQUE",
+    "tipo_transporte": "SEMIREMOLQUE",
     "fecha_fin_vigencia": "2050-12-16",
     "estatus_actual_de_unidad": "OPERANDO",
     "sticker_id": "23-UZ-8C",
@@ -166,5 +166,35 @@
     "estatus_actual_de_unidad": "OPERANDO",
     "sticker_id": "23-WD-9A",
     "real_placa": "76UJ8F"
+  },
+  {
+    "matricula_placa": "35-UX-5N",
+    "vin": "3FA6P0HD4JRA999080",
+    "numero_permiso": "PL/23285/TRA/OM/2020_N1",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-WD-9B"
+  },
+  {
+    "matricula_placa": "73-AF-6H",
+    "vin": "3FA6P0HD4JRA999090",
+    "numero_permiso": "PL/23285/TRA/OM/2020_N2",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-WD-9C"
+  },
+  {
+    "matricula_placa": "468-VX-7",
+    "vin": "3FA6P0HD4JRA999100",
+    "numero_permiso": "PL/23285/TRA/OM/2020_N3",
+    "actividad_regulada": "TRANSPORTE POR MEDIOS DISTINTOS DE DUCTOS PETROLIFEROS",
+    "tipo_transporte": "SEMIREMOLQUE",
+    "fecha_fin_vigencia": "2050-12-16",
+    "estatus_actual_de_unidad": "OPERANDO",
+    "sticker_id": "23-WD-9D"
   }
 ]
