@@ -6,7 +6,6 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
 const upload = multer();
 
 app.use(cors());
@@ -18,18 +17,23 @@ const dataDir = path.join(__dirname, 'data');
 function getVehicles() {
   try {
     const p = path.join(dataDir, 'vehicles.json');
-    if (fs.existsSync(p)) return JSON.parse(fs.readFileSync(p, 'utf8'));
+    if (fs.existsSync(p)) {
+      return JSON.parse(fs.readFileSync(p, 'utf8'));
+    }
   } catch (e) {
     console.error('Error al leer vehicles.json:', e);
   }
   return [];
 }
 
+// 1. Validar placa (forzando 23285 siempre)
 app.post('/consultar-placa', upload.none(), (req, res) => {
   const { placa, serie, vin } = req.body;
   const searchVal = (placa || serie || vin || '').trim().toUpperCase().replace(/[\s-]/g, '');
 
-  if (!searchVal) return res.status(400).json({ error: true, message: 'Ingrese dato.' });
+  if (!searchVal) {
+    return res.status(400).json({ error: true, message: 'Ingrese dato para validar.' });
+  }
 
   const vehicles = getVehicles();
   let foundVehicle = vehicles.find(v => {
@@ -40,7 +44,7 @@ app.post('/consultar-placa', upload.none(), (req, res) => {
   });
 
   if (foundVehicle) {
-    // AQUÍ FORZAMOS EL PERMISO PARA QUE SIEMPRE SEA EL CORRECTO
+    // FORZADO INVARIABLE
     foundVehicle.numero_permiso = "PL/23285/TRA/OM/2020";
     return res.json({ error: false, data: [foundVehicle] });
   } else {
@@ -48,8 +52,8 @@ app.post('/consultar-placa', upload.none(), (req, res) => {
   }
 });
 
-// Forzamos el endpoint de permiso para que siempre devuelva el 23285
-app.get('/api/permiso/:id', (req, res) => {
+// 2. Ruta universal para devolver siempre KAYJES
+app.get(['/api/permiso/:id', '/api/permiso/PL/:num/TRA/OM/:year'], (req, res) => {
     return res.json({
         razon_social: "KAYJES INTERNACIONAL S.A. DE C.V.",
         numero_permiso: "PL/23285/TRA/OM/2020",
@@ -58,4 +62,6 @@ app.get('/api/permiso/:id', (req, res) => {
     });
 });
 
-app.listen(PORT, '0.0.0.0', () => console.log(`API corriendo en el puerto ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`API CNE ejecutándose en el puerto ${PORT}`);
+});
