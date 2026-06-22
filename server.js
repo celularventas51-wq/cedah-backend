@@ -1,25 +1,29 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
-const fs = require('fs');
-
 const app = express();
+const PORT = process.env.PORT || 3000;
+const fs = require('fs');
+const path = require('path');
+
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
 
-// Helper de Vehículos
+// Helpers para manejar los datos
+const dataDir = path.join(__dirname, 'data');
 function getVehicles() {
     try {
-        const p = path.join(__dirname, 'data', 'vehicles.json');
+        const p = path.join(dataDir, 'vehicles.json');
         return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : [];
     } catch (e) { return []; }
 }
 
-// Endpoint Consulta
+// Endpoint Consulta de Placas
 app.post('/consultar-placa', (req, res) => {
     const { placa, serie, vin } = req.body;
     const val = (placa || serie || vin || '').trim().toUpperCase().replace(/[\s-]/g, '');
+
+    if (!val) return res.status(400).json({ error: true, message: 'Ingrese dato válido' });
 
     const vehicles = getVehicles();
     let found = vehicles.find(v => {
@@ -30,21 +34,29 @@ app.post('/consultar-placa', (req, res) => {
     });
 
     if (found) {
-        found.numero_permiso = "PL/23285/TRA/OM/2020"; // FORZADO
+        found.numero_permiso = "PL/23285/TRA/OM/2020"; // FORZADO ESTÁTICO
         return res.json({ error: false, data: [found] });
     }
-    return res.status(200).json({ error: true });
+    return res.status(200).json({ error: true, code: 404, message: 'No registrado' });
 });
 
-// Endpoint Permisos
+// Endpoint Permisos (Siempre el mismo)
 app.get('/api/permiso/:id', (req, res) => {
     res.json({
         razon_social: "KAYJES INTERNACIONAL S.A. DE C.V.",
         numero_permiso: "PL/23285/TRA/OM/2020",
-        vigencia: "Del 2020-01-15 al 2050-12-16"
+        vigencia: "Del 2020-01-15 al 2050-12-16",
+        estado: "Vigente"
     });
 });
 
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
+// Endpoint Reportes (si lo sigues necesitando)
+app.get('/api/reportes', (req, res) => {
+    try {
+        const p = path.join(dataDir, 'reports.json');
+        const r = fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : [];
+        res.json(r);
+    } catch(e) { res.json([]); }
+});
 
-app.listen(process.env.PORT || 3000, '0.0.0.0');
+app.listen(PORT, '0.0.0.0', () => console.log(`API activa en puerto ${PORT}`));
