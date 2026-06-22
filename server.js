@@ -3,15 +3,12 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
 
-app.use(cors()); // Importante para que cPanel pueda hablar con Render
+app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 const dataDir = path.join(__dirname, 'data');
 
-// Helper
 function getVehicles() {
     try {
         const p = path.join(dataDir, 'vehicles.json');
@@ -19,12 +16,10 @@ function getVehicles() {
     } catch (e) { return []; }
 }
 
-// Endpoint Consulta
+// 1. Consulta Placa (Búsqueda flexible)
 app.post('/consultar-placa', (req, res) => {
     const { placa, serie, vin } = req.body;
     const val = (placa || serie || vin || '').trim().toUpperCase().replace(/[\s-]/g, '');
-
-    if (!val) return res.status(400).json({ error: true, message: 'Ingrese datos' });
 
     const vehicles = getVehicles();
     let found = vehicles.find(v => {
@@ -35,13 +30,13 @@ app.post('/consultar-placa', (req, res) => {
     });
 
     if (found) {
-        found.numero_permiso = "PL/23285/TRA/OM/2020";
+        found.numero_permiso = "PL/23285/TRA/OM/2020"; // FORZADO
         return res.json({ error: false, data: [found] });
     }
-    return res.status(200).json({ error: true, code: 404, message: 'No registrado' });
+    return res.status(200).json({ error: true });
 });
 
-// Endpoint Permiso (Hardcodeado)
+// 2. Permiso (CRÍTICO: Sin esto, los QRs no cargan información)
 app.get('/api/permiso/:id', (req, res) => {
     res.json({
         razon_social: "KAYJES INTERNACIONAL S.A. DE C.V.",
@@ -51,4 +46,6 @@ app.get('/api/permiso/:id', (req, res) => {
     });
 });
 
-app.listen(PORT, '0.0.0.0', () => console.log(`API activa en puerto ${PORT}`));
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+    console.log('API Activa');
+});
